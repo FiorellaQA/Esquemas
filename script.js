@@ -1,11 +1,23 @@
-var contenedor = document.getElementById("body-content");
-	contenedor.appendChild(createElement("div","div-content"));
-	contenedor.appendChild(createElement("div","div-content2"));
+var contenedorPrincipal = createElement("div","contenedorPrincipal");
 
-var contentRed = document.getElementsByClassName("div-content1")[0];
-var contentBlue = document.getElementsByClassName("div-content2")[0];
-	contentBlue.appendChild(createElement("div","verde"));
-	contentBlue.appendChild(createElement("div","black"));
+var contenedor1 = createElement("div","div-content");
+var contentMorado = createElement("div","morado");
+var contentAmarillo = createElement("div", "amarillo");
+
+var contenedor2 = createElement("div","div-content2");
+var contentVerde = createElement("div","verde");
+var contentNegro = createElement("div","black");
+
+	document.body.appendChild(contenedorPrincipal);
+
+	contenedorPrincipal.appendChild(contenedor1);
+	contenedorPrincipal.appendChild(contenedor2);
+	contenedor2.appendChild(contentNegro);
+	contenedor2.appendChild(contentVerde);
+
+	contenedor1.appendChild(contentMorado);
+	contentMorado.appendChild(contentAmarillo);
+	contenedor1.appendChild(contentMorado);
 
 
 
